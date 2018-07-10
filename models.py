@@ -4,6 +4,7 @@ from flask import *
 connection = pymysql.connect(host='localhost',user='root',password='',db='flaskdb')
 cur = connection.cursor()
 
+#creates table in the database
 def create_tables():
 	connection = pymysql.connect(host='localhost',user='root',password='',db='flaskdb')
 	with connection.cursor() as cursor:
