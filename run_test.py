@@ -1,21 +1,13 @@
 from flask import *
 import unittest
-from run import app
+from run import *
 
-class SimpleServer(gevent.server.StreamServer):
 
-    def handle(self, socket, address):
-        socket.sendall('hello and goodbye!')
-
-class Test(unittest.TestCase):      
-
-    def test(self):
-        server = SimpleServer(('127.0.0.1', 0))
-        server.start()
-        client = gevent.socket.create_connection(('127.0.0.1', server.server_port))
-        response = client.makefile().read()
-        assert response == 'hello and goodbye!'
-        server.stop()
+class Test(unittest.TestCase):         
+ def test_connection1(self):  
+   with patch('__main__.mysql.connector.connect') as  mock_mysql_connector_connect:
+   	object=TestMySQL()
+   	object.before_request()
 
 if __name__ == '__main__':
     unittest.main()       
