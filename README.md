@@ -18,7 +18,7 @@ download the zip folder into your computer.
 *extract the files from the zip folder into another folder within the computer.
 
 *open command prompt and move to the folder directory containing the app.
-*on the cmd; install flask by typing:
+*on the cmd; install pymysql by typing:
 ```
 C:\>pip install pymysql
 ```
