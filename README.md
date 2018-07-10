@@ -8,10 +8,10 @@ download the zip folder into your computer.
 
 ### Prerequisites
 
-XAMP
-Flask
-pymysql
-jwt
+*XAMP
+*Flask
+*pymysql
+*jwt
 
 
 ### Installing
