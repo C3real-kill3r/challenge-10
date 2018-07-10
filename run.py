@@ -15,6 +15,7 @@ def home():
     create_tables()
     return jsonify({'message' : 'welcome home techies'})
 
+#registering a new user
 @app.route ('/register',methods=['POST'])
 def register():
     name=request.get_json()["name"]
